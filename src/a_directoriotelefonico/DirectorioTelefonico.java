@@ -17,6 +17,9 @@ public DirectorioTelefonico() {
     }
 //-----------------------------------------------------------------------------
 public void agregarCliente(int nroTel,Cliente cli){
+/*que permite registrar un nuevo cliente con su respectivo nro de teléfono. 
+Siendo el nro del teléfono la clave del mismo.*/
+
     if(directorio.containsKey(nroTel)){
         System.out.print("No se pudo agregar "+nroTel);
         System.out.print(" .El número esta asignado a : "+directorio.get(nroTel).getNombre());
