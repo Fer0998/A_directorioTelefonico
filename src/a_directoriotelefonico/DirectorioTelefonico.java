@@ -30,13 +30,16 @@ Siendo el nro del teléfono la clave del mismo.*/
     }
 }
 //-----------------------------------------------------------------------------
+
 public Cliente buscarCliente(int nroTel){
+// que en base al nro de teléfono retorna el Cliente asociado al mismo.
 
     return directorio.get(nroTel);
 }
 //----------------------------------------------------------------------------
 public ArrayList<Integer> buscarTelefono(String apellido){
-    
+ //que en base a un apellido nos devuelve una lista con los nros.de teléfono asociados a dicho apellido.   
+ 
     ArrayList<Integer> nrosTelefonos = new ArrayList();
    
     for (Map.Entry<Integer,Cliente> ap:directorio.entrySet()){
@@ -48,7 +51,8 @@ return nrosTelefonos;
 }
 //-----------------------------------------------------------------------------
 public ArrayList<Cliente> buscarCiudadCliente(String ciudad){
-  
+//que en base a una ciudad nos devuelve una lista con los Clientes asociados a dicha ciudad.
+
     ArrayList<Cliente> ciudades = new ArrayList();
    
     for (Cliente ap:directorio.values()){
@@ -60,6 +64,8 @@ return ciudades;
 }
 //-----------------------------------------------------------------------------
 public void borrarCliente(int nroTel){
+// que en base a un nro de teléfono elimina el cliente del directorio. 
+
     if(directorio.containsKey(nroTel)){
         directorio.remove(nroTel);
         System.out.println("Nro eliminado :"+nroTel);
@@ -76,6 +82,7 @@ public void mostrarDirectorio(){
         System.out.println(r.getValue());
     }
 }  
+//-----------------------------------------------------------------------------
  public <T>void mostrarArreglo(ArrayList<T> lista){
      
      Iterator itera = lista.iterator();
